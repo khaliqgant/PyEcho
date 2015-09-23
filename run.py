@@ -1,4 +1,20 @@
+# coding=utf-8
+import ConfigParser
+import os
+import time
 import PyEcho
+
+# grab creds
+pwd = os.path.dirname(os.path.abspath(__file__))
+configParser = ConfigParser.RawConfigParser()
+configFilePath = '%s/config.txt' % pwd
+configParser.read(configFilePath)
+
+# Create an echo object
+echo = PyEcho.PyEcho(
+    configParser.get('creds', 'email'), configParser.get('creds', 'pass')
+)
+
 # Listen for events.
 # This is naïve, it assumes the above worked.
 while True:
