@@ -1,2 +1,9 @@
 *.pyc
 *.swp
+config.txt
+# Rope
+.ropeproject
+.DS_Store
+
+#Virtualenv
+venv
