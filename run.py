@@ -15,6 +15,11 @@ echo = PyEcho.PyEcho(
     configParser.get('creds', 'email'), configParser.get('creds', 'pass')
 )
 
+
+def handle_request(task):
+    # do something with this text
+    print "let's do something with this" + task
+
 # Listen for events.
 # This is naïve, it assumes the above worked.
 while True:
@@ -25,6 +30,7 @@ while True:
     for task in tasks:
        # Do something depending on the task here.
         print "New task found: " + task['text']
+        handle_request(task['text'])
 
       # Now that we're done with it, delete it.
       # Again, this is naïve. We should error check the response code.
