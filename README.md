@@ -45,3 +45,13 @@ URLs of API endpoints to make authenticated requests against (GET).
 * urllib
 * cookielib
 
+#### Command Notes
+* Starting a command with "Take out the..." automatically will trigger the 
+to do list command
+```
+    Take out the github integration control test
+```
+* Will trigger the script
+
+#### Misc
+* Could potentially submit new skill
